@@ -1,0 +1,26 @@
+{
+	"name": "eslint-config-norigin",
+	"version": "1.0.0-alpha.1",
+	"description": "NoriginMedia base JS ESLint config",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NoriginMedia/eslint-config-norigin.git"
+	},
+	"bugs": {
+		"url": "https://github.com/NoriginMedia/eslint-config-norigin/issues"
+	},
+	"homepage": "https://github.com/NoriginMedia/eslint-config-norigin",
+	"devDependencies": {
+		"eslint": "^3.0.1",
+		"eslint-find-rules": "^1.10.0",
+		"eslint-plugin-import": "^1.8.1",
+	},
+	"peerDependencies": {
+		"eslint": "^3.0.1",
+		"eslint-plugin-import": "^1.8.1"
+	}
+}
