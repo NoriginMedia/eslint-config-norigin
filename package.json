@@ -17,7 +17,7 @@
 	"devDependencies": {
 		"eslint": "^3.0.1",
 		"eslint-find-rules": "^1.10.0",
-		"eslint-plugin-import": "^1.8.1",
+		"eslint-plugin-import": "^1.8.1"
 	},
 	"peerDependencies": {
 		"eslint": "^3.0.1",
