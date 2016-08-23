@@ -37,6 +37,9 @@ module.exports = {
 		// enforce newline at the end of file, with no multiple empty lines
 		"eol-last": 2,
 
+		// disallow space between function identifier and application
+		"func-call-spacing": [2, "never"],
+
 		// require function expressions to have a name
 		// TODO should all our function expressions have names
 		"func-names": 0,
@@ -126,6 +129,9 @@ module.exports = {
 		// http://eslint.org/docs/rules/max-statements-per-line
 		"max-statements-per-line": [2, { "max": 3 }],
 
+		//	enforce newlines between operands of ternary expressions
+		"multiline-ternary": 0,
+
 		// require a capital letter for constructors
 		"new-cap": 2,
 
@@ -205,8 +211,8 @@ module.exports = {
 			"WithStatement"
 		],
 
-		// disallow space between function identifier and application
-		"no-spaced-func": 2,
+		// disallow tabs in file
+		"no-tabs": 0,
 
 		// disallow the use of ternary operators
 		"no-ternary": 0,
@@ -290,6 +296,9 @@ module.exports = {
 			"before": false,
 			"after": true
 		}],
+
+		// requires object keys to be sorted
+		"sort-keys": 0,
 
 		// sort variables within the same declaration block
 		"sort-vars": 0,

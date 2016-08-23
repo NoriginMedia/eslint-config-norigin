@@ -65,9 +65,6 @@ module.exports = {
 		// disallow irregular whitespace outside of strings and comments
 		"no-irregular-whitespace": 2,
 
-		// disallow negation of the left operand of an in expression
-		"no-negated-in-lhs": 2,
-
 		// disallow the use of object properties of the global object (Math and JSON) as functions
 		"no-obj-calls": 2,
 
@@ -81,11 +78,17 @@ module.exports = {
 		// disallow sparse arrays
 		"no-sparse-arrays": 2,
 
+		// disallow template literal placeholder syntax in regular strings
+		"no-template-curly-in-string": 2,
+
 		// Avoid code that looks like two expressions but is actually one
 		"no-unexpected-multiline": 2,
 
 		// disallow unreachable statements after a return, throw, continue, or break statement
 		"no-unreachable": 2,
+
+		// disallow negation of the left operand of an in expression
+		"no-unsafe-negation": 2,
 
 		// disallow return/throw/break/continue inside finally blocks
 		// http://eslint.org/docs/rules/no-unsafe-finally

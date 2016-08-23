@@ -92,6 +92,9 @@ module.exports = {
 		// disallow the use of leading or trailing decimal points in numeric literals
 		"no-floating-decimal": 2,
 
+		// disallow reassignments of native objects
+		"no-global-assign": 2,
+
 		// disallow the type conversions with shorter notations
 		"no-implicit-coercion": [2, {
 			"boolean": true,
@@ -137,9 +140,6 @@ module.exports = {
 
 		// disallow use of multiline strings
 		"no-multi-str": 2,
-
-		// disallow reassignments of native objects
-		"no-native-reassign": 2,
 
 		// disallow use of new operator when not part of the assignment or comparison
 		"no-new": 0,
