@@ -110,8 +110,7 @@ module.exports = {
 
 		// require method and property shorthand syntax for object literals
 		// http://eslint.org/docs/rules/object-shorthand
-		// TODO dicede should we have shorthand notation or not
-		"object-shorthand": 0,
+		"object-shorthand": [2, "consistent"],
 
 		// suggest using arrow functions as callbacks
 		// TODO replace all aninumous functions callback with arrow-callback
