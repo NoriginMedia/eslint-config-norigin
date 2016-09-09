@@ -113,8 +113,8 @@ module.exports = {
 		"object-shorthand": [2, "consistent"],
 
 		// suggest using arrow functions as callbacks
-		// TODO replace all aninumous functions callback with arrow-callback
-		"prefer-arrow-callback": 0,
+		// TODO replace all anoninumous functions callback with arrow-callback
+		"prefer-arrow-callback": 1,
 
 		// suggest using of const declaration for variables that are never modified after declared
 		"prefer-const": [2, {
@@ -123,8 +123,7 @@ module.exports = {
 		}],
 
 		// suggest using Reflect methods where applicable
-		// TODO deal with it later
-		"prefer-reflect": 0,
+		"prefer-reflect": 1,
 
 		// use rest parameters instead of arguments
 		// http://eslint.org/docs/rules/prefer-rest-params
@@ -135,8 +134,7 @@ module.exports = {
 
 		// suggest using template literals instead of string concatenation
 		// http://eslint.org/docs/rules/prefer-template
-		// TODO replace all string concatenation with string templates
-		"prefer-template": 0,
+		"prefer-template": 1,
 
 		// disallow generator functions that do not have yield
 		"require-yield": 0,
@@ -147,7 +145,7 @@ module.exports = {
 
 		// import sorting
 		// http://eslint.org/docs/rules/sort-imports
-		// TODO should we sort our imorts in some specific way for better code redability http://eslint.org/docs/rules/sort-imports
+		// TODO should we sort our imports in some specific way for better code readability http://eslint.org/docs/rules/sort-imports
 		"sort-imports": 0,
 
 		// enforce usage of spacing in template strings

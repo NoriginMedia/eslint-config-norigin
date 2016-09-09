@@ -229,7 +229,7 @@ module.exports = {
 
 		// requires to declare all vars on top of their containing scope
 		// TODO move all vars on top someday
-		"vars-on-top": 0,
+		"vars-on-top": 1,
 
 		// require immediate function invocation to be wrapped in parentheses
 		// http://eslint.org/docs/rules/wrap-iife.html
