@@ -143,6 +143,9 @@ module.exports = {
 		// http://eslint.org/docs/rules/rest-spread-spacing
 		"rest-spread-spacing": [2, "never"],
 
+		// require symbol descriptions
+		"symbol-description": 2,
+
 		// import sorting
 		// http://eslint.org/docs/rules/sort-imports
 		// TODO should we sort our imports in some specific way for better code readability http://eslint.org/docs/rules/sort-imports
