@@ -98,7 +98,13 @@ module.exports = {
 
 		// Ensure consistent use of file extension within the import path
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-		"import/extensions": [2, "never"],
+		"import/extensions": [2, {
+			"js": "never",
+			"json": "never",
+			"less": "always",
+			"scss": "always",
+			"css": "always"
+		}],
 
 		// Enforce a convention in module import order
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
