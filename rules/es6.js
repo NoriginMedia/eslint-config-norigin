@@ -18,6 +18,7 @@ module.exports = {
 			"classes": true,
 			"defaultParams": true,
 			"destructuring": true,
+			"experimentalObjectRestSpread": true,
 			"forOf": true,
 			"generators": true,
 			"modules": true,
