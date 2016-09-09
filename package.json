@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^3.3.1",
-		"eslint-find-rules": "^1.10.0",
+		"eslint-find-rules": "^1.10.0"
 	},
 	"peerDependencies": {
 		"eslint": "^3.3.1",
