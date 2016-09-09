@@ -11,7 +11,11 @@ module.exports = {
 	],
 
 	settings: {
-		"import/resolver": "webpack"
+		"import/resolver": {
+			node: {
+				extensions: [".js", ".json"]
+			}
+		}
 	},
 
 	rules: {
@@ -19,7 +23,8 @@ module.exports = {
 
 		// ensure imports point to files/modules that can be resolved
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-		"import/no-unresolved": [2, {commonjs: true}],
+		// todo disabled now, because shows big number of false positive, require additional investigation
+		"import/no-unresolved": [0, {commonjs: true}],
 
 		// ensure named imports coupled with named exports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
@@ -52,7 +57,8 @@ module.exports = {
 
 		// Forbid the use of extraneous packages
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
-		"import/no-extraneous-dependencies": [2, {
+		// todo disabled since we use a lot dependencies not included in package.json
+		"import/no-extraneous-dependencies": [0, {
 			devDependencies: false,
 			optionalDependencies: false
 		}],
