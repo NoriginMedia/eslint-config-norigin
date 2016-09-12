@@ -123,6 +123,9 @@ module.exports = {
 			ignoreReadBeforeAssign: true
 		}],
 
+		// disallow parseInt() in favor of binary, octal, and hexadecimal literals
+		"prefer-numeric-literals": 2,
+
 		// suggest using Reflect methods where applicable
 		"prefer-reflect": 1,
 

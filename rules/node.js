@@ -32,6 +32,9 @@ module.exports = {
 		// restrict usage of specified node modules
 		"no-restricted-modules": 0,
 
+		// disallow certain properties on certain objects
+		"no-restricted-properties": 0,
+
 		// disallow use of synchronous methods (off by default)
 		"no-sync": 0
 	}

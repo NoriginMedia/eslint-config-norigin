@@ -80,6 +80,9 @@ module.exports = {
 		// require a space before & after certain keywords
 		"keyword-spacing": 2,
 
+		// enforce position of line comments
+		"line-comment-position": [2, { "position": "above" }],
+
 		// disallow mixed "LF" and "CRLF" as linebreaks
 		"linebreak-style": [2, "unix"],
 
@@ -93,6 +96,9 @@ module.exports = {
 			"allowObjectStart": true,
 			"allowArrayStart": true
 		}],
+
+		// require or disallow newlines around directives
+		"lines-around-directive": [2, { "before": "never", "after": "always" }],
 
 		// specify the maximum depth that blocks can be nested
 		"max-depth": [2, {"maximum": 5}],
