@@ -257,7 +257,7 @@ module.exports = {
 
 		// enforce "same line" or "multiple line" on object properties.
 		// http://eslint.org/docs/rules/object-property-newline
-		"object-property-newline": 2,
+		"object-property-newline": 1,
 
 		// allow just one var statement per function
 		// TODO probably we should discuss var declarations

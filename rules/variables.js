@@ -22,7 +22,7 @@ module.exports = {
 		"no-restricted-globals": [2, "event", "fdescribe"],
 
 		// disallow declaration of variables already declared in the outer scope
-		'no-shadow': 2,
+		'no-shadow': [2, { "builtinGlobals": true }],
 
 		// disallow shadowing of names such as arguments
 		'no-shadow-restricted-names': 2,

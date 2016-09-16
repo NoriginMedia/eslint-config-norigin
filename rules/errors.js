@@ -70,7 +70,7 @@ module.exports = {
 
 		// disallow use of Object.prototypes builtins directly
 		// http://eslint.org/docs/rules/no-prototype-builtins
-		"no-prototype-builtins": 2,
+		"no-prototype-builtins": 1,
 
 		// disallow multiple spaces in a regular expression literal
 		"no-regex-spaces": 2,
