@@ -22,7 +22,8 @@ module.exports = {
 		"no-restricted-globals": [2, "event", "fdescribe"],
 
 		// disallow declaration of variables already declared in the outer scope
-		'no-shadow': [2, { "builtinGlobals": true, "hoist": "never" }],
+		// but allow for globals, ES6 imports reported as error when imported module name is the same as exported
+		'no-shadow': [2, { "builtinGlobals": false, "hoist": "all" }],
 
 		// disallow shadowing of names such as arguments
 		'no-shadow-restricted-names': 2,
