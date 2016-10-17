@@ -40,6 +40,9 @@ module.exports = {
 		// disallow space between function identifier and application
 		"func-call-spacing": [2, "never"],
 
+		// require function names to match the name of the variable or property to which they are assigned
+		"func-name-matching": 2,
+
 		// require function expressions to have a name
 		// TODO should all our function expressions have names
 		"func-names": 0,
