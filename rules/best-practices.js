@@ -215,6 +215,9 @@ module.exports = {
 		// http://eslint.org/docs/rules/no-useless-escape
 		"no-useless-escape": 2,
 
+		// disallow redundant return statements
+		"no-useless-return": 2,
+
 		// disallow use of void operator
 		"no-void": 2,
 

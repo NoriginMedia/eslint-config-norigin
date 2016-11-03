@@ -17,16 +17,16 @@
   "dependencies": {
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.0",
-    "eslint-plugin-react": "^6.4.0"
+    "eslint-plugin-react": "^6.5.0"
   },
   "devDependencies": {
-    "eslint": "^3.8.0",
+    "eslint": "^3.9.0",
     "eslint-find-rules": "^1.10.0"
   },
   "peerDependencies": {
-    "eslint": "^3.8.0",
+    "eslint": "^3.9.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.0",
-    "eslint-plugin-react": "^6.4.0"
+    "eslint-plugin-react": "^6.5.0"
   }
 }
