@@ -1,0 +1,15 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Node Modules
+node_modules
+*.log
+
+# Build
+/build
+
+# Ignore OSX Crap
+.com.apple.timemachine.supported
