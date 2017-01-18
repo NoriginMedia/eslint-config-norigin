@@ -19,6 +19,10 @@ module.exports = {
 		// require camel case names
 		"camelcase": ["error", {properties: "never"}],
 
+		// enforce or disallow capitalization of the first letter of a comment
+		// http://eslint.org/docs/rules/capitalized-comments
+		"capitalized-comments": ["off", "never"],
+
 		// enforce spacing before and after comma
 		"comma-spacing": ["error", {
 			before: false,

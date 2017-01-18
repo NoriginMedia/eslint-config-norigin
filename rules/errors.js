@@ -6,6 +6,10 @@
 
 module.exports = {
 	rules: {
+		// Disallow await inside of loops
+		// http://eslint.org/docs/rules/no-await-in-loop
+		"no-await-in-loop": "error",
+
 		// require trailing commas in multiline object literals
 		"comma-dangle": "error",
 

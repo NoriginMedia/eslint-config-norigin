@@ -123,6 +123,16 @@ module.exports = {
 			ignoreReadBeforeAssign: true
 		}],
 
+		// Prefer destructuring from arrays and objects
+		// http://eslint.org/docs/rules/prefer-destructuring
+		// TODO: enable
+		"prefer-destructuring": ["warn", {
+			array: true,
+			object: true
+		}, {
+			enforceForRenamedProperties: true
+		}],
+
 		// disallow parseInt() in favor of binary, octal, and hexadecimal literals
 		"prefer-numeric-literals": "error",
 

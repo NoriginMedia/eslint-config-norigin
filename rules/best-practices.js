@@ -236,6 +236,10 @@ module.exports = {
 		// require use of the second argument for parseInt()
 		"radix": "error",
 
+		// require `await` in `async function` (note: this is a horrible rule that should never be used)
+		// http://eslint.org/docs/rules/require-await
+		"require-await": "off",
+
 		// requires to declare all vars on top of their containing scope
 		// TODO move all vars on top someday
 		"vars-on-top": "warn",
