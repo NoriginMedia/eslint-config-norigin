@@ -41,6 +41,6 @@ module.exports = {
 		"console": true
 	},
 	rules: {
-		strict: 2
+		strict: "error"
 	}
 };
