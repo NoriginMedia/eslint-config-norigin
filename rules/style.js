@@ -195,8 +195,8 @@ module.exports = {
 
 		// disallow multiple empty lines and only one newline at the end
 		"no-multiple-empty-lines": ["warn", {
-			"max": "warn",
-			"maxEOF": "off"
+			"max": 1,
+			"maxEOF": 0
 		}],
 
 		// disallow negated conditions
