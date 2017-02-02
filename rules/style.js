@@ -193,6 +193,9 @@ module.exports = {
 		// disallow mixed spaces and tabs for indentation
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
 
+		// disallow use of chained assignment expressions
+		"no-multi-assign": "error",
+
 		// disallow multiple empty lines and only one newline at the end
 		"no-multiple-empty-lines": ["warn", {
 			"max": 1,

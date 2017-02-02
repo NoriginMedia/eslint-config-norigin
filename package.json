@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-norigin",
-  "version": "2.0.0-beta.3",
+  "version": "2.1.0",
   "description": "NoriginMedia base JS ESLint config",
   "main": "index.js",
   "scripts": {
@@ -17,18 +17,16 @@
   "dependencies": {
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.0",
-    "eslint-plugin-react": "^6.9.0",
-    "eslint-plugin-react-native": "^2.2.1"
+    "eslint-plugin-react": "^6.9.0"
   },
   "devDependencies": {
-    "eslint": "^3.13.0",
+    "eslint": "^3.14.0",
     "eslint-find-rules": "^1.10.0"
   },
   "peerDependencies": {
-    "eslint": "^3.11.0",
+    "eslint": "^3.14.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.0",
-    "eslint-plugin-react": "^6.9.0",
-    "eslint-plugin-react-native": "^2.2.1"
+    "eslint-plugin-react": "^6.9.0"
   }
 }
