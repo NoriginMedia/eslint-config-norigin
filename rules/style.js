@@ -193,6 +193,9 @@ module.exports = {
 		// disallow mixed spaces and tabs for indentation
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
 
+		// disallow use of chained assignment expressions
+		"no-multi-assign": "error",
+
 		// disallow multiple empty lines and only one newline at the end
 		"no-multiple-empty-lines": ["warn", {
 			"max": 1,
@@ -243,6 +246,9 @@ module.exports = {
 		// disallow whitespace before properties
 		// http://eslint.org/docs/rules/no-whitespace-before-property
 		"no-whitespace-before-property": "error",
+
+		// enforce the location of single-line statements
+		"nonblock-statement-body-position": ["error", "below"],
 
 		// require padding inside curly braces
 		"object-curly-spacing": ["error", "never"],
@@ -336,6 +342,9 @@ module.exports = {
 
 		// require or disallow a space immediately following the // or /* in a comment
 		"spaced-comment": ["warn", "always", {"exceptions": ["-", "*"]}],
+
+		// require or disallow spacing between template tags and their literals
+		"template-tag-spacing": "error",
 
 		// require or disallow the Unicode Byte Order Mark
 		// http://eslint.org/docs/rules/unicode-bom

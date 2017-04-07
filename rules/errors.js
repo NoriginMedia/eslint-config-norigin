@@ -10,6 +10,9 @@ module.exports = {
 		// http://eslint.org/docs/rules/no-await-in-loop
 		"no-await-in-loop": "error",
 
+		// disallow comparing against -0
+		"no-compare-neg-zero": "error",
+
 		// require trailing commas in multiline object literals
 		"comma-dangle": "error",
 
