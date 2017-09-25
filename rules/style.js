@@ -60,6 +60,9 @@ module.exports = {
 		// enforces use of function declarations or expressions
 		"func-style": "off",
 
+		// enforce consistent line breaks inside function parentheses
+		"function-paren-newline": ["error", "multiline"],
+
 		// Blacklist certain identifiers to prevent them being used
 		// http://eslint.org/docs/rules/id-blacklist
 		"id-blacklist": ["off", "data", "err", "e", "cb", "callback"],
