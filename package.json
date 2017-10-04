@@ -15,14 +15,14 @@
   },
   "homepage": "https://github.com/NoriginMedia/eslint-config-norigin",
   "dependencies": {
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^3.0.0",
     "eslint-plugin-react": "^6.9.0",
     "eslint-plugin-react-native": "^2.2.1"
   },
   "devDependencies": {
     "eslint": "^4.8.0",
-    "eslint-find-rules": "^1.10.0"
+    "eslint-find-rules": "^3.1.1"
   },
   "peerDependencies": {
     "eslint": "^4.8.0",
