@@ -31,9 +31,17 @@ module.exports = {
 			]
 		}],
 
-		// Specify whether double or single quotes should be used in JSX attributes
-		// http://eslint.org/docs/rules/jsx-quotes
-		"jsx-quotes": ["error", "prefer-double"],
+		// Enforces consistent naming for boolean props
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
+		// TODO require finetune and discussion
+		"react/boolean-prop-naming":["warn", {
+			propTypeNames: ["bool", "mutuallyExclusiveTrueProps"],
+			rule: "^(is|has)[A-Z]([A-Za-z0-9]?)+"
+		}],
+
+		// Prevent extraneous defaultProps on components
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
+		"react/default-props-match-prop-types": "error",
 
 		// Prevent missing displayName in a React component definition
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -43,9 +51,17 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
 		"react/forbid-component-props": ["off", {forbid: []}],
 
+		// Forbid certain elements
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
+		"react/forbid-elements": ["off", {forbid: []}],
+
 		// Forbid certain propTypes (any, array, object)
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
 		"react/forbid-prop-types": ["off", {forbid: ["any", "array", "object"]}],
+
+		// Forbid foreign propTypes
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
+		"react/forbid-foreign-prop-types": "error",
 
 		// Prevent usage of Array index in keys
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
@@ -53,12 +69,11 @@ module.exports = {
 
 		// Prevent passing children as props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
-		// todo change to error after checking with react/prop-types
-		"react/no-children-prop": "warn",
+		"react/no-children-prop": "error",
 
 		// Prevent usage of dangerous JSX properties
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
-		"react/no-danger": "warn",
+		"react/no-danger": "error",
 
 		// Prevent problem with children and props.dangerouslySetInnerHTML
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
@@ -92,6 +107,10 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
 		"react/no-multi-comp": ["error", {ignoreStateless: true}],
 
+		// Prevent usage of shouldComponentUpdate when extending React.PureComponent
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
+		"react/no-redundant-should-component-update": "error",
+
 		// disallow using React.render/ReactDOM.render"s return value
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
 		"react/no-render-return-value": "error",
@@ -99,6 +118,10 @@ module.exports = {
 		// Prevent usage of setState
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
 		"react/no-set-state": "off",
+
+		// Prevent common casing typos
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md
+		"react/no-typos": "error",
 
 		// Prevent using string references
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
@@ -118,6 +141,13 @@ module.exports = {
 			customValidators: [],
 			skipShapeProps: true
 		}],
+
+		// MISSING IN DOCUMENTATION no-unused-state
+		"react/no-unused-state": "error",
+
+		// Prevent usage of setState in componentWillUpdate
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md
+		"react/no-will-update-set-state": "error",
 
 		// Require ES6 class declarations over React.createClass
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
@@ -177,9 +207,16 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
 		"react/style-prop-object": "error",
 
+		// Prevent void DOM elements (e.g. <img />, <br />) from receiving children
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
+		"react/void-dom-elements-no-children": "error",
 
 
 		// JSX-specific rules
+
+		// Specify whether double or single quotes should be used in JSX attributes
+		// http://eslint.org/docs/rules/jsx-quotes
+		"jsx-quotes": ["error", "prefer-double"],
 
 		// Enforce boolean attributes notation in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
@@ -188,6 +225,10 @@ module.exports = {
 		// Validate closing bracket location in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
 		"react/jsx-closing-bracket-location": ["error", "line-aligned"],
+
+		// Validate closing tag location in JSX (fixable)
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+		"react/jsx-closing-tag-location": "error",
 
 		// Enforce or disallow spaces inside of curly braces in JSX attributes
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
@@ -226,7 +267,7 @@ module.exports = {
 
 		// Limit maximum of props on a single line in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-		"react/jsx-max-props-per-line": ["off", {maximum: 1}],
+		"react/jsx-max-props-per-line": ["error", {maximum: 1}],
 
 		// Prevent usage of .bind() in JSX props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -256,6 +297,13 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
 		"react/jsx-no-undef": "error",
 
+		// Enforce curly braces or disallow unnecessary curly braces in JSX
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
+		"react/jsx-curly-brace-presence": ["error", {
+			props: "never",
+			children: "never"
+		}],
+
 		// Enforce PascalCase for user-defined JSX components
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
 		"react/jsx-pascal-case": ["error", {
@@ -271,10 +319,6 @@ module.exports = {
 			shorthandFirst: false,
 			shorthandLast: false
 		}],
-
-		// Enforce spaces before the closing bracket of self-closing JSX elements
-		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
-		"react/jsx-space-before-closing": ["error", "always"],
 
 		// Validate whitespace in and around the JSX opening and closing brackets
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
