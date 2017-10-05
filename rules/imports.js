@@ -130,7 +130,7 @@ module.exports = {
 
 		// Ensure all exports appear after other statements
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
-		"exports-last": "warn",
+		"import/exports-last": "warn",
 
 		// disallow duplicate imports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
@@ -179,6 +179,6 @@ module.exports = {
 
 		// Forbid anonymous values as default exports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
-		"no-anonymous-default-export": "error"
+		"import/no-anonymous-default-export": "warn"
 	}
 };

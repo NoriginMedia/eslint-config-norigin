@@ -7,13 +7,15 @@
 module.exports = {
 	rules: {
 		// enforce linebreaks after opening and before closing array brackets
-		"array-bracket-newline": ["error", {"multiline": true}],
+		// TODO enable as soon as "consistent" option will be added
+		"array-bracket-newline": ["off", {"multiline": true}],
 
 		// enforce spacing inside array brackets
 		"array-bracket-spacing": ["error", "never"],
 
 		// enforce line breaks after each array element
-		"array-element-newline": ["error", {"multiline": true}],
+		// TODO enable as soon as "consistent" option will be added
+		"array-element-newline": ["off", {"multiline": true}],
 
 		// enforce spacing inside single-line blocks
 		// http://eslint.org/docs/rules/block-spacing
