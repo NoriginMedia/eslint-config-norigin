@@ -130,7 +130,8 @@ module.exports = {
 
 		// Ensure all exports appear after other statements
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
-		"import/exports-last": "warn",
+		// TODO enable when be included in official release
+		// "import/exports-last": "warn",
 
 		// disallow duplicate imports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
