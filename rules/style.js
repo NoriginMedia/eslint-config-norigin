@@ -6,8 +6,16 @@
 
 module.exports = {
 	rules: {
+		// enforce linebreaks after opening and before closing array brackets
+		// TODO enable as soon as "consistent" option will be added
+		"array-bracket-newline": ["off", {"multiline": true}],
+
 		// enforce spacing inside array brackets
 		"array-bracket-spacing": ["error", "never"],
+
+		// enforce line breaks after each array element
+		// TODO enable as soon as "consistent" option will be added
+		"array-element-newline": ["off", {"multiline": true}],
 
 		// enforce spacing inside single-line blocks
 		// http://eslint.org/docs/rules/block-spacing
@@ -53,6 +61,9 @@ module.exports = {
 
 		// enforces use of function declarations or expressions
 		"func-style": "off",
+
+		// enforce consistent line breaks inside function parentheses
+		"function-paren-newline": ["error", "multiline"],
 
 		// Blacklist certain identifiers to prevent them being used
 		// http://eslint.org/docs/rules/id-blacklist
@@ -104,9 +115,6 @@ module.exports = {
 			"allowArrayStart": true
 		}],
 
-		// require or disallow newlines around directives
-		"lines-around-directive": ["error", { "before": "never", "after": "always" }],
-
 		// specify the maximum depth that blocks can be nested
 		"max-depth": ["error", {"maximum": 5}],
 
@@ -150,12 +158,6 @@ module.exports = {
 
 		// disallow the omission of parentheses when invoking a constructor with no arguments
 		"new-parens": "error",
-
-		// allow/disallow an empty newline after var statement
-		"newline-after-var": "warn",
-
-		// http://eslint.org/docs/rules/newline-before-return
-		"newline-before-return": "warn",
 
 		// enforces new line after each method call in the chain to make it
 		// more readable and easy to maintain
@@ -291,6 +293,16 @@ module.exports = {
 		// enforce padding within blocks
 		"padded-blocks": ["warn", "never"],
 
+		// TODO add more rules regarding formatting
+		// require or disallow padding lines between statements
+		"padding-line-between-statements": ["warn",
+		    {blankLine: "always", prev: "*", next: "return" },
+			{blankLine: "always", prev: ["const", "let", "var"], next: "*"},
+            {blankLine: "any",    prev: ["const", "let", "var"], next: ["const", "let", "var"]},
+			{blankLine: "always", prev: "directive", next: "*"},
+            {blankLine: "any",    prev: "directive", next: "directive"}
+		],
+
 		// require quotes around object literal property names
 		// http://eslint.org/docs/rules/quote-props.html
 		"quote-props": ["error", "as-needed", {
@@ -314,6 +326,9 @@ module.exports = {
 			"before": false,
 			"after": true
 		}],
+
+		// enforce location of semicolons
+		"semi-style": ["error", "last"],
 
 		// requires object keys to be sorted
 		"sort-keys": "off",
@@ -342,6 +357,9 @@ module.exports = {
 
 		// require or disallow a space immediately following the // or /* in a comment
 		"spaced-comment": ["warn", "always", {"exceptions": ["-", "*"]}],
+
+		// enforce spacing around colons of switch statements
+		"switch-colon-spacing": "error",
 
 		// require or disallow spacing between template tags and their literals
 		"template-tag-spacing": "error",

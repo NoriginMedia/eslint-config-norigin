@@ -46,6 +46,29 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
 		"import/namespace": "off",
 
+		// Restrict which files can be imported in a given folder
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
+		"import/no-restricted-paths": "off",
+
+		// Forbid import of modules using absolute paths
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
+		"import/no-absolute-path": "error",
+
+		// Forbid require() calls with expressions
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
+		"import/no-dynamic-require": "error",
+
+		// prevent importing the submodules of other modules
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
+		"import/no-internal-modules": ["off", {
+			allow: []
+		}],
+
+		// Forbid Webpack loader syntax in imports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
+		"import/no-webpack-loader-syntax": "error",
+
+
 		// Helpful warnings:
 
 		// disallow invalid exports, e.g. multiple defaults
@@ -76,7 +99,15 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
 		"import/no-mutable-exports": "error",
 
+
 		// Module systems:
+
+		// Warn if a module could be mistakenly parsed as a script by a consumer
+		// leveraging Unambiguous JavaScript Grammar
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
+		// this should not be enabled until this proposal has at least been *presented* to TC39.
+		// At the moment, it"s not a thing.
+		"import/unambiguous": "off",
 
 		// disallow require()
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
@@ -90,11 +121,17 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
 		"import/no-nodejs-modules": "error",
 
+
 		// Style guide:
 
 		// disallow non-import statements appearing before import statements
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
 		"import/first": ["error", "absolute-first"],
+
+		// Ensure all exports appear after other statements
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
+		// TODO enable when be included in official release
+		// "import/exports-last": "warn",
 
 		// disallow duplicate imports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
@@ -128,38 +165,9 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
 		"import/prefer-default-export": "error",
 
-		// Restrict which files can be imported in a given folder
-		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
-		"import/no-restricted-paths": "off",
-
 		// Forbid modules to have too many dependencies
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
 		"import/max-dependencies": ["off", {max: 10}],
-
-		// Forbid import of modules using absolute paths
-		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
-		"import/no-absolute-path": "error",
-
-		// Forbid require() calls with expressions
-		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
-		"import/no-dynamic-require": "error",
-
-		// prevent importing the submodules of other modules
-		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
-		"import/no-internal-modules": ["off", {
-			allow: []
-		}],
-
-		// Warn if a module could be mistakenly parsed as a script by a consumer
-		// leveraging Unambiguous JavaScript Grammar
-		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
-		// this should not be enabled until this proposal has at least been *presented* to TC39.
-		// At the moment, it"s not a thing.
-		"import/unambiguous": "off",
-
-		// Forbid Webpack loader syntax in imports
-		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
-		"import/no-webpack-loader-syntax": "error",
 
 		// Prevent unassigned imports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
@@ -168,6 +176,10 @@ module.exports = {
 
 		// Prevent importing the default as if it were named
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
-		"import/no-named-default": "error"
+		"import/no-named-default": "error",
+
+		// Forbid anonymous values as default exports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
+		"import/no-anonymous-default-export": "warn"
 	}
 };
