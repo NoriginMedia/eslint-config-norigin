@@ -72,10 +72,10 @@ module.exports = {
 		// this option enforces minimum and maximum identifier lengths
 		// (variable names, property names etc.)
 		"id-length": ["warn", {
-			"min": 1,
-			"max": 25,
+			"min": 2,
+			"max": 30,
 			"properties": "never",
-			"exceptions": []
+			"exceptions": ["i", "j", "e", "m", "h", "d"]
 		}],
 
 		// require identifiers to match the provided regular expression

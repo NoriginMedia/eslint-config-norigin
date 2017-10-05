@@ -8,9 +8,6 @@ module.exports = {
 			jsx: true
 		}
 	},
-	ecmaFeatures: {
-		jsx: true
-	},
 
 	// View link below for react rules documentation
 	// https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
@@ -213,10 +210,6 @@ module.exports = {
 
 
 		// JSX-specific rules
-
-		// Specify whether double or single quotes should be used in JSX attributes
-		// http://eslint.org/docs/rules/jsx-quotes
-		"jsx-quotes": ["error", "prefer-double"],
 
 		// Enforce boolean attributes notation in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
