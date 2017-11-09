@@ -153,7 +153,7 @@ module.exports = {
 		"max-statements-per-line": ["error", { "max": 3 }],
 
 		// enforce a particular style for multiline comments
-		"multiline-comment-style": ["warn", "starred-block"],
+		"multiline-comment-style": ["warn", "bare-block"],
 
 		//	enforce newlines between operands of ternary expressions
 		"multiline-ternary": "off",
