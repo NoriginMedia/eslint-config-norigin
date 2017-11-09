@@ -7,8 +7,7 @@
 module.exports = {
 	rules: {
 		// enforce linebreaks after opening and before closing array brackets
-		// TODO enable as soon as "consistent" option will be added
-		"array-bracket-newline": ["off", {"multiline": true}],
+		"array-bracket-newline": ["error", "consistent"],
 
 		// enforce spacing inside array brackets
 		"array-bracket-spacing": ["error", "never"],
@@ -115,6 +114,9 @@ module.exports = {
 			"allowArrayStart": true
 		}],
 
+		// require or disallow an empty line between class members
+		"lines-between-class-members": ["error", "always"],
+
 		// specify the maximum depth that blocks can be nested
 		"max-depth": ["error", {"maximum": 5}],
 
@@ -149,6 +151,9 @@ module.exports = {
 		// restrict the number of statements per line
 		// http://eslint.org/docs/rules/max-statements-per-line
 		"max-statements-per-line": ["error", { "max": 3 }],
+
+		// enforce a particular style for multiline comments
+		"multiline-comment-style": ["warn", "starred-block"],
 
 		//	enforce newlines between operands of ternary expressions
 		"multiline-ternary": "off",
