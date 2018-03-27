@@ -36,9 +36,18 @@ module.exports = {
 			rule: "^(is|has)[A-Z]([A-Za-z0-9]?)+"
 		}],
 
+		// Forbid "button" element without an explicit "type" attribute
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
+		"react/button-has-type": "error",
+
 		// Prevent extraneous defaultProps on components
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
 		"react/default-props-match-prop-types": "error",
+
+		// Rule enforces consistent usage of destructuring assignment in component
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+		// todo need to be discussed
+		"react/destructuring-assignment": "off",
 
 		// Prevent missing displayName in a React component definition
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -47,6 +56,10 @@ module.exports = {
 		// Forbid certain props on Components
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
 		"react/forbid-component-props": ["off", {forbid: []}],
+
+		// Forbid certain props on DOM Nodes
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md
+		"react/forbid-dom-props": "error",
 
 		// Forbid certain elements
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
@@ -59,6 +72,10 @@ module.exports = {
 		// Forbid foreign propTypes
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
 		"react/forbid-foreign-prop-types": "error",
+
+		// Prevent using this.state inside this.setState
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
+		"react/no-access-state-in-setstate": "error",
 
 		// Prevent usage of Array index in keys
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
@@ -123,6 +140,10 @@ module.exports = {
 		// Prevent using string references
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
 		"react/no-string-refs": "error",
+
+		// Prevent using this in stateless functional components
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-this-in-sfc.md
+		"react/no-this-in-sfc": "error",
 
 		// Prevent invalid characters from appearing in markup
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
@@ -215,6 +236,10 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
 		"react/jsx-boolean-value": ["error", "never"],
 
+		// Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
+		"react/jsx-child-element-spacing": "error",
+
 		// Validate closing bracket location in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
 		"react/jsx-closing-bracket-location": ["error", "line-aligned"],
@@ -258,6 +283,10 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
 		"react/jsx-key": "off",
 
+		// Validate JSX maximum depth
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md
+		"react/jsx-max-depth": ["error", { "max": 4}],
+
 		// Limit maximum of props on a single line in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
 		"react/jsx-max-props-per-line": ["error", {maximum: 1}],
@@ -290,6 +319,10 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
 		"react/jsx-no-undef": "error",
 
+		// Limit to one expression per line in JSX
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
+		"react/jsx-one-expression-per-line": "error",
+
 		// Enforce curly braces or disallow unnecessary curly braces in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
 		"react/jsx-curly-brace-presence": ["error", {
@@ -304,8 +337,13 @@ module.exports = {
 			ignore: []
 		}],
 
+		// Enforce default props alphabetical sorting
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
+		"react/jsx-sort-default-props": "off",
+
 		// Enforce props alphabetical sorting
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
+		// todo discuss
 		"react/jsx-sort-props": ["off", {
 			ignoreCase: false,
 			callbacksLast: false,
