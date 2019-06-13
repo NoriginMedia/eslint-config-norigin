@@ -79,7 +79,7 @@ module.exports = {
 
 		// Prevent usage of Array index in keys
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
-		"react/no-array-index-key": "error",
+		"react/no-array-index-key": ["off"],
 
 		// Prevent passing children as props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md

@@ -72,7 +72,7 @@ module.exports = {
 		// (variable names, property names etc.)
 		"id-length": ["warn", {
 			"min": 2,
-			"max": 30,
+			"max": 60,
 			"properties": "never",
 			"exceptions": ["i", "j", "e", "m", "h", "d", "x", "y", "z"]
 		}],
