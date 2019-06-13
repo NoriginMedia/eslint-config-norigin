@@ -74,7 +74,7 @@ module.exports = {
 			"min": 2,
 			"max": 30,
 			"properties": "never",
-			"exceptions": ["i", "j", "e", "m", "h", "d"]
+			"exceptions": ["i", "j", "e", "m", "h", "d", "x", "y", "z"]
 		}],
 
 		// require identifiers to match the provided regular expression
@@ -85,7 +85,7 @@ module.exports = {
 
 		// this option sets a specific tab width for your code
 		// http://eslint.org/docs/rules/indent
-		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"indent": ["error", 2, { "SwitchCase": 1 }],
 
 		// specify whether double or single quotes should be used in JSX attributes
 		// http://eslint.org/docs/rules/jsx-quotes
@@ -101,7 +101,7 @@ module.exports = {
 		"keyword-spacing": "error",
 
 		// enforce position of line comments
-		"line-comment-position": ["error", { "position": "above" }],
+		"line-comment-position": ["off"],
 
 		// disallow mixed "LF" and "CRLF" as linebreaks
 		"linebreak-style": ["error", "unix"],
@@ -162,7 +162,7 @@ module.exports = {
 		"multiline-ternary": "off",
 
 		// require a capital letter for constructors
-		"new-cap": "error",
+		"new-cap": ["error", {"capIsNew": false}],
 
 		// disallow the omission of parentheses when invoking a constructor with no arguments
 		"new-parens": "error",
@@ -182,7 +182,7 @@ module.exports = {
 		"no-continue": "error",
 
 		// disallow comments inline after code
-		"no-inline-comments": "warn",
+		"no-inline-comments": ["off"],
 
 		// disallow if as the only statement in an else block
 		"no-lonely-if": "error",
@@ -246,7 +246,7 @@ module.exports = {
 		"no-trailing-spaces": "error",
 
 		// disallow dangling underscores in identifiers
-		"no-underscore-dangle": ["error", { "allow": ["_super", "__useDefault"] }],
+		"no-underscore-dangle": ["off"],
 
 		// disallow the use of Boolean literals in conditional expressions
 		// also, prefer `a || b` over `a ? a : b`
@@ -319,7 +319,7 @@ module.exports = {
 		}],
 
 		// specify whether double or single quotes should be used
-		"quotes": ["error", "double"],
+		"quotes": ["error", "single", "avoid-escape"],
 
 		// do not require jsdoc
 		// http://eslint.org/docs/rules/require-jsdoc

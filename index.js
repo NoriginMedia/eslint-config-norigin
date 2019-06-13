@@ -5,7 +5,7 @@ module.exports = {
 		"./rules/imports"
 	].map(require.resolve),
 	parserOptions: {
-		ecmaVersion: 6 ,
+		ecmaVersion: 7,
 		sourceType: "module"
 	},
 	globals: {

@@ -26,7 +26,7 @@ module.exports = {
 		"no-cond-assign": ["error", "except-parens"],
 
 		// disallow use of console
-		"no-console": "warn",
+		"no-console": ["error", {"allow": ["warn", "error", "log"]}],
 
 		// disallow use of constant expressions in conditions
 		"no-constant-condition": "error",
