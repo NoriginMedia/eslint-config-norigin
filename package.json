@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-norigin",
-  "version": "3.7.3",
+  "version": "3.7.4",
   "description": "NoriginMedia base JS ESLint config",
   "main": "index.js",
   "scripts": {
