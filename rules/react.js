@@ -1,7 +1,8 @@
 module.exports = {
 	plugins: [
 		"react",
-		"react-native"
+		"react-native",
+		"react-hooks"
 	],
 	parserOptions: {
 		ecmaFeatures: {
@@ -373,7 +374,10 @@ module.exports = {
 			declaration: true,
 			assignment: true,
 			return: true
-		}]
+		}],
+
+		"react-hooks/rules-of-hooks": ["error"],
+		"react-hooks/exhaustive-deps": ["error"]
 	},
 
 	settings: {
