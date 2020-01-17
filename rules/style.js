@@ -265,21 +265,11 @@ module.exports = {
 
 		// enforce line breaks between braces
 		// http://eslint.org/docs/rules/object-curly-newline
-		// TODO: enable once https://github.com/eslint/eslint/issues/6488 is resolved
-		"object-curly-newline": ["off", {
-			ObjectExpression: {
-				minProperties: "error",
-				multiline: true
-			},
-			ObjectPattern: {
-				minProperties: "error",
-				multiline: true
-			}
-		}],
+		"object-curly-newline": ["error", {"multiline": true}],
 
 		// enforce "same line" or "multiple line" on object properties.
 		// http://eslint.org/docs/rules/object-property-newline
-		"object-property-newline": "warn",
+		"object-property-newline": "error",
 
 		// allow just one var statement per function
 		// TODO probably we should discuss var declarations
