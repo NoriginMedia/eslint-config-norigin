@@ -265,7 +265,10 @@ module.exports = {
 
 		// enforce line breaks between braces
 		// http://eslint.org/docs/rules/object-curly-newline
-		"object-curly-newline": ["error", {"multiline": true}],
+		"object-curly-newline": ["error", {
+			"multiline": true,
+			"consistent": true
+		}],
 
 		// enforce "same line" or "multiple line" on object properties.
 		// http://eslint.org/docs/rules/object-property-newline
